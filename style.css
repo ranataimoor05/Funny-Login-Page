@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #0d0e15;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #e2e8f0;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.illustration-side {
+  width: 45%;
+  background-color: #c9ccd6;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.character-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.character {
+  position: absolute;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: transform 0.1s ease-out;
+}
+
+.character.purple {
+  width: 90px;
+  height: 180px;
+  background-color: #6a1b9a;
+  left: 15%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.character.orange {
+  width: 110px;
+  height: 90px;
+  background-color: #ef5350;
+  bottom: 0;
+  left: 32%;
+  z-index: 2;
+  border-radius: 60px 60px 0 0;
+}
+
+.character.yellow {
+  width: 75px;
+  height: 150px;
+  background-color: #ffca28;
+  right: 18%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.eyes {
+  display: flex;
+  gap: 10px;
+}
+
+.eye {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pupil {
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.05s ease-out;
+}
+
+.mouth {
+  width: 20px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 2px;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+}
+
+.character.peeking .pupil {
+  transform: translate(0, -5px) !important;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px; 
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 12px;
+  color: #666;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-side {
+  width: 55%;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.star-icon {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.form-side h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #000000;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.remember {
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.forgot {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.btn-login:hover {
+  background-color: #333333;
+}
+
+.btn-google {
+  width: 100%;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-google:hover {
+  background-color: #f8f8f8;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.signup-text a {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+}
